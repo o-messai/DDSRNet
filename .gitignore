@@ -118,7 +118,7 @@ data/UDD/
 # Spyder project settings
 .spyderproject
 .spyproject
-
+*.pth
 # Rope project settings
 .ropeproject
 
