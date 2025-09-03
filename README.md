@@ -4,9 +4,32 @@
 
 ## Overview
 
-DDSRNet (A Deep Model for Denoising and Super-Resolution) is a new two-stage learning architecture designed for simultaneous image denoising and super-resolution. By decoupling these complex tasks, DDSRNet enables specialized processing for each, leading to more effective noise removal and higher-quality upscaling
+DDSRNet (A Deep Model for Denoising and Super-Resolution) is a new two-stage learning architecture designed for simultaneous image denoising and super-resolution. By decoupling these complex tasks, DDSRNet enables specialized processing for each, leading to more effective noise removal and higher-quality upscaling.
+
 ### Features
 
+- **Two-Stage Architecture**: Decoupled denoising and super-resolution stages for specialized processing
+- **Advanced Loss Function**: Novel composite loss combining multiple image quality metrics for robust training
+- **Multi-Task Learning**: Simultaneous optimization of denoising and super-resolution objectives
+- **High-Quality Output**: Enhanced image quality through specialized loss components
+
+#### Advanced Loss Function
+
+DDSRNet employs a sophisticated composite loss function that combines multiple image quality metrics:
+
+![Loss Function Components](./model/loss.png)
+
+**Composite Loss Components:**
+- **L1 Loss**: Pixel-wise absolute difference between reference and output images
+- **SSIM Loss**: Structural similarity index measure for perceptual quality (weighted by 10)
+- **PSNR Loss**: Peak signal-to-noise ratio optimization (weighted by 100/PSNR)
+
+**Training Loss:**
+```
+Loss_training = λ × Loss_denoising + β × Loss_super-resolution
+```
+
+Where λ and β are weighting coefficients that balance the contribution of each task-specific loss component.
 
 ## Paper
 
