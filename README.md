@@ -1,5 +1,5 @@
 # DDSRNet
-![DDSRNet Architecture](./model/DDSRNet.png)
+![DDSRNet Architecture](./model/DDSRNet.jpg)
 ## Paper
 
 This implementation is based on our paper published at the **2025 Seventeenth International Conference on Quality Control by Artificial Vision; 1373705 (2025)**: [Read the Paper on arXiv](https://doi.org/10.48550/arXiv.2509.01332)
