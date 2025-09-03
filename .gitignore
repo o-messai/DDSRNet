@@ -113,7 +113,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
+model/checkpoints/
+data/UDD/
 # Spyder project settings
 .spyderproject
 .spyproject
