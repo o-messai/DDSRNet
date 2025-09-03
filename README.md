@@ -1,4 +1,7 @@
 # DDSRNet
+
+#### DDSRNet (A Deep Model for Denoising and Super-Resolution) is a new two-stage learning architecture designed for simultaneous image denoising and super-resolution. By decoupling these complex tasks, DDSRNet enables specialized processing for each, leading to more effective noise removal and higher-quality upscaling.
+
 ![DDSRNet Architecture](./model/DDSRNet.png)
 ## Paper
 
@@ -16,10 +19,6 @@ This implementation is based on our paper published at the **2025 Seventeenth In
   organization={SPIE}
 }
 ```
-
-## Overview
-
-DDSRNet (A Deep Model for Denoising and Super-Resolution) is a new two-stage learning architecture designed for simultaneous image denoising and super-resolution. By decoupling these complex tasks, DDSRNet enables specialized processing for each, leading to more effective noise removal and higher-quality upscaling.
 
 ### Features
 
