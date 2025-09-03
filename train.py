@@ -156,7 +156,7 @@ if __name__ == '__main__':
     best_epoch = 0
     
     # Create checkpoint directory
-    checkpoint_dir = os.path.join(config.get('save_dir', './model/checkpoints'), 'checkpoints')
+    checkpoint_dir = os.path.join(config.get('save_dir', './model/checkpoints'))
     ensure_dir(checkpoint_dir)
     latest_checkpoint_path = os.path.join(checkpoint_dir, 'latest_checkpoint.pth')
     
