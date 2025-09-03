@@ -1,0 +1,67 @@
+# Configuration file for DDSRNet training
+# This file contains all the parameters needed for the super-resolution and denoising model
+
+# Model Architecture Parameters
+factor: 4                    # Super-resolution factor (how much to upscale)
+patch_size: 128             # Size of training patches
+input_type: "L"             # Input image type: "L" for grayscale, "RGB" for color
+output_type: "L"            # Output image type: "L" for grayscale, "RGB" for color
+
+# Training Parameters
+batch_size: 32              # Batch size for training
+epochs: 200                 # Number of training epochs
+learning_rate: 0.0001       # Learning rate for optimizer
+weight_decay: 0.001         # Weight decay for regularization
+lambda_weight: 1.0          # Weight for denoising loss component
+beta_weight: 1.0            # Weight for super-resolution loss component
+
+# Dataset Configuration
+dataset_name: "UDD"        # Dataset name to use for training
+train_split: 0.8            # Percentage of data to use for training
+val_split: 0.1              # Percentage of data to use for validation
+test_split: 0.1             # Percentage of data to use for testing
+
+# Dataset folder paths
+UDD:
+  train_dir: "./data/UDD"
+  valid_dir: "./data/UDD"
+  test_dir: "./data/UDD"
+
+# Data Loading Parameters
+num_workers: 0              # Number of workers for data loading
+pin_memory: true            # Whether to pin memory for faster GPU transfer
+shuffle: true               # Whether to shuffle training data
+stride: 64                  # Stride for patch extraction
+noise: 0.2                  # Noise level for denoising
+noise_type: "s&p"      # Noise type for denoising
+
+# Loss Function Parameters
+data_range: 1.0             # Data range for loss calculations (0-1 for normalized images)
+size_average: true          # Whether to average loss across batch
+channel: 1                  # Number of output channels (1 for grayscale, 3 for RGB)
+
+# Optimizer and Scheduler
+optimizer: "Adam"           # Optimizer type
+scheduler: "StepLR"         # Learning rate scheduler type
+scheduler_step: 50          # Step size for StepLR scheduler
+scheduler_gamma: 0.8        # Gamma factor for StepLR scheduler
+
+# Model Saving and Logging
+save_dir: "./model/checkpoints"         # Directory to save model checkpoints
+best_model_name: "best_SR.pth"  # Name for the best model checkpoint
+log_dir: "./results"        # Directory for logging results
+tensorboard_dir: "./visualize/tensorboard"  # Directory for tensorboard logs
+resume_training: false      # Whether to resume training from checkpoint
+save_checkpoints: true      # Whether to save checkpoints during training
+checkpoint_frequency: 10    # Save checkpoint every N epochs
+
+# Testing and Evaluation
+test_input_dir: "./results/input_img"  # Directory containing test input images
+test_output_dir: "./test"   # Directory to save test output images
+
+# Random Seed
+seed: 14732152              # Random seed for reproducibility
+
+# Hardware Configuration
+device: "auto"              # Device to use: "auto", "cpu", or "cuda:0"
+use_mixed_precision: false  # Whether to use mixed precision training
