@@ -1,6 +1,21 @@
 # DDSRNet
-
 ![DDSRNet Architecture](./model/DDSRNet.png)
+## Paper
+
+This implementation is based on our paper published at the **2025 Seventeenth International Conference on Quality Control by Artificial Vision; 1373705 (2025)**: [Read the Paper on arXiv](https://doi.org/10.48550/arXiv.2509.01332)
+
+## Citation
+```bibtex
+@inproceedings{messai2025enhancing,
+  title={Enhancing image quality and anomaly detection for small and dense industrial objects in nuclear recycling},
+  author={Messai, Oussama and Zein-Eddine, Abbass and Bentamou, Abdelouahid and Picq, Micka{\"e}l and Duquesne, Nicolas and Puydarrieux, St{\'e}phane and Gavet, Yann},
+  booktitle={Seventeenth International Conference on Quality Control by Artificial Vision},
+  volume={13737},
+  pages={21--28},
+  year={2025},
+  organization={SPIE}
+}
+```
 
 ## Overview
 
@@ -31,22 +46,6 @@ Loss_training = λ × Loss_denoising + β × Loss_super-resolution
 
 Where λ and β are weighting coefficients that balance the contribution of each task-specific loss component.
 
-## Paper
-
-This implementation is based on our paper published at the **2025 Seventeenth International Conference on Quality Control by Artificial Vision; 1373705 (2025)**: [Read the Paper on arXiv](https://doi.org/10.48550/arXiv.2509.01332)
-
-## Citation
-```bibtex
-@inproceedings{messai2025enhancing,
-  title={Enhancing image quality and anomaly detection for small and dense industrial objects in nuclear recycling},
-  author={Messai, Oussama and Zein-Eddine, Abbass and Bentamou, Abdelouahid and Picq, Micka{\"e}l and Duquesne, Nicolas and Puydarrieux, St{\'e}phane and Gavet, Yann},
-  booktitle={Seventeenth International Conference on Quality Control by Artificial Vision},
-  volume={13737},
-  pages={21--28},
-  year={2025},
-  organization={SPIE}
-}
-```
 
 ## Requirements
 
